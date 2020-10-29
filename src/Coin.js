@@ -26,8 +26,8 @@ const Coin = ( { image, symbol, name, price, volume, priceChange, marketcap } ) 
 
                     <div>
                         { priceChange < 0 ? 
-                        ( <p className = "coin-percent red"><span>changes : </span> { priceChange.toFixed(2)} % </p> ) :
-                        ( <p className = "coin-percent green"><span>changes : </span> { priceChange.toFixed(2)} % </p> )
+                        ( <p className = "coin-percent red"><span>changes : </span> { priceChange ? priceChange.toFixed(2) : 0 } % </p> ) :
+                        ( <p className = "coin-percent green"><span>changes : </span> { priceChange ? priceChange.toFixed(2) : 0 } % </p> )
                         }
                     </div>
 
